@@ -4,7 +4,7 @@ require('hardline').setup {
     exclude_terminal = false,  -- don't show terminal buffers in bufferline
     show_index = false,        -- show buffer indexes (not the actual buffer numbers) in bufferline
   },
-  theme = 'default',   -- change theme
+  theme = 'dracula',   -- change theme
   sections = {         -- define sections
     {class = 'mode', item = require('hardline.parts.mode').get_item},
     {class = 'high', item = require('hardline.parts.git').get_item, hide = 100},
@@ -19,3 +19,5 @@ require('hardline').setup {
     {class = 'mode', item = require('hardline.parts.line').get_item},
   },
 }
+
+vim.cmd("highlight TabLineFill gui=bold")
