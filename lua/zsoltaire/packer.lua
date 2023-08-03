@@ -131,6 +131,8 @@ return require('packer').startup(function(use)
 
     use "dstein64/vim-startuptime"
 
+    use "norcalli/nvim-colorizer.lua"
+
     if packer_bootstrap then
       require('packer').sync()
     end
