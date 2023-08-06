@@ -5,7 +5,6 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'bashls',
   'csharp_ls',
-  'docker_compose_language_service',
   'dockerls',
   'pylsp',
   'yamlls',
@@ -65,7 +64,7 @@ end)
 local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup({})
 lspconfig.solargraph.setup({})
-lspconfig.docker_compose_language_service.setup{}
+--lspconfig.docker_compose_language_service.setup{}
 lspconfig.dockerls.setup{}
 lspconfig.pylsp.setup{}
 lspconfig.bashls.setup{}

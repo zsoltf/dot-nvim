@@ -98,13 +98,11 @@ return require('packer').startup(function(use)
     use("goldfeld/vim-seek")
     use('airblade/vim-gitgutter')
 
-    use("ojroques/nvim-hardline")
+    use("zsoltf/nvim-hardline")
     -- TODO pick one
+    use 'nvim-lualine/lualine.nvim'
+    --use 'nvim-tree/nvim-web-devicons'
     --[[
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
     use("feline-nvim/feline.nvim")
     use({
         'glepnir/galaxyline.nvim',
@@ -132,6 +130,20 @@ return require('packer').startup(function(use)
     use "dstein64/vim-startuptime"
 
     use "norcalli/nvim-colorizer.lua"
+
+    use 'gelguy/wilder.nvim'
+
+    use 'romgrk/fzy-lua-native'
+
+    use {
+      "nvim-telescope/telescope-file-browser.nvim",
+      requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
+
+    use {
+      "nvim-telescope/telescope-frecency.nvim",
+      requires = {"kkharji/sqlite.lua"}
+}
 
     if packer_bootstrap then
       require('packer').sync()
