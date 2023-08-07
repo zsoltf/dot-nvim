@@ -34,7 +34,9 @@ require("telescope").setup({
 require('telescope').load_extension('projects')
 require("telescope").load_extension("zf-native")
 --require("telescope").load_extension("fzy_native")
-require"telescope".load_extension("frecency")
+if vim.loop.os_uname().sysname ~= "Windows_NT" then
+    require"telescope".load_extension("frecency")
+end
 require("telescope").load_extension "file_browser"
 
 local builtin = require('telescope.builtin')

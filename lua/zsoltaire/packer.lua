@@ -140,10 +140,12 @@ return require('packer').startup(function(use)
       requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
 
+    if vim.loop.os_uname().sysname ~= "Windows_NT" then
     use {
       "nvim-telescope/telescope-frecency.nvim",
       requires = {"kkharji/sqlite.lua"}
-}
+    }
+    end
 
     if packer_bootstrap then
       require('packer').sync()

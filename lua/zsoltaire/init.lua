@@ -10,7 +10,11 @@ vim.g.indent_guides_enable_on_vim_startup = 1
 vim.g.indent_guides_guide_size = 1
 vim.g.indent_guides_start_level = 3
 
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-  command = "lcd $PWD",
-  pattern = "*"
-})
+if vim.loop.os_uname().sysname == "Windows_NT" then
+    vim.cmd('cd $HOME')
+else
+    vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+        command = "lcd $PWD",
+        pattern = "*"
+    })
+end
