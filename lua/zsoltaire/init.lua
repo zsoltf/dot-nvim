@@ -11,7 +11,7 @@ vim.g.indent_guides_guide_size = 1
 vim.g.indent_guides_start_level = 3
 
 if vim.loop.os_uname().sysname == "Windows_NT" then
-    vim.cmd('cd $HOME')
+    vim.cmd('cd $USERPROFILE')
 else
     vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
         command = "lcd $PWD",
