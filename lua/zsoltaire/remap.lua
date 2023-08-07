@@ -42,3 +42,5 @@ vim.keymap.set("n", "<leader>Q", "<cmd>:ccl<CR>")
 
 vim.keymap.set("n", "<leader>z", "zMzozozozozozozozozz")
 vim.keymap.set("n", "<leader>Z", "zazAzt")
+
+vim.keymap.set("n", "<leader>T", ":terminal<CR>")
