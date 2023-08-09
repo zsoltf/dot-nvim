@@ -148,6 +148,11 @@ return require('packer').startup(function(use)
     }
     end
 
+    use {
+      "rest-nvim/rest.nvim",
+      requires = { "nvim-lua/plenary.nvim" },
+    }
+
     if packer_bootstrap then
       require('packer').sync()
     end
