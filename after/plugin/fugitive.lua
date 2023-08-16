@@ -16,8 +16,6 @@ autocmd("BufWinEnter", {
     pattern = "*",
     callback = function()
 
-        vim.keymap.set("n", "q", ":close<CR>")
-
         if vim.bo.ft ~= "fugitive" then
             return
         end
